@@ -2,10 +2,10 @@
 
 |Name|Level|Scope|Comment
 |--|--|--|--|
-|The website is available via client’s domain address with SSL and redirected from HTTP to HTTPS|Critical 🔴|Frontend 🖥, Security 🔒||
+|The website is available via client’s domain address with TLS and redirected from HTTP to HTTPS|Critical 🔴|Frontend 🖥, Security 🔒||
 |The domain is redirected to the www subdomain|Critical 🔴|Frontend 🖥||
 |The check on https://securityheaders.com/ gives at least a “B” grade|Critical 🔴|Frontend 🖥, Security 🔒||
-|The backend is accessible via the client’s domain with SSL|Critical 🔴|Backend ⚙️, Security 🔒||
+|The backend is accessible via the client’s domain with TLS|Critical 🔴|Backend ⚙️, Security 🔒||
 |The backend is accessible only from the client’s domains using CORS|Critical 🔴|Backend ⚙️, Security 🔒|Not possible with mobile apps|
 |The JWT secret is safe and configured only on the server-side|Critical 🔴|Backend ⚙️, Security 🔒||
 |The app has an error-monitoring system configured|Critical|Backend ⚙️, Frontend 🖥, Monitoring 👀|Recommended: https://sentry.io|
