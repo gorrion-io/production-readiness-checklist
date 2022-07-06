@@ -6,7 +6,7 @@
 |The domain is redirected to the www subdomain|Critical 🔴|Frontend 🖥||
 |The check on https://securityheaders.com/ gives at least a “B” grade|Critical 🔴|Frontend 🖥, Security 🔒||
 |The backend is accessible via the client’s domain with SSL|Critical 🔴|Backend ⚙️, Security 🔒||
-|The backend ⚙️ is accessible only from the client’s domains using CORS|Critical 🔴|Backend ⚙️, Security 🔒|Not possible with mobile apps|
+|The backend is accessible only from the client’s domains using CORS|Critical 🔴|Backend ⚙️, Security 🔒|Not possible with mobile apps|
 |The JWT secret is safe and configured only on the server-side|Critical 🔴|Backend ⚙️, Security 🔒||
 |The app has an error-monitoring system configured|Critical|Backend ⚙️, Frontend 🖥, Monitoring 👀|Recommended: https://sentry.io|
 |The app is deployed via CI solution|Critical 🔴|Deployment 🚀, CI/CD 🤖||
