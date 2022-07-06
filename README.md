@@ -21,6 +21,6 @@
 |The auto-scaling solution is enabled|Should have 🟡|Deployment 🚀, Backend ⚙️||
 |The frontend should be checked periodically in terms of performance|Should have 🟡|Frontend 🖥|At least test Core Web Vitals via Chrome Lighthouse|
 |Tests and audits should be run in CI/CD pipelines|Should have 🟡|CI/CD 🤖, Security 🔒|Audit packages to limit CVEs, use SNYK CLI to check production docker images|
-|The app has an ability to quickly check and deploy hot-fixes to production.|Should have 🟡|Deployment 🚀, CI/CD 🤖||
-|The error messages on client doesn’t include stack traces.|Nice to have 🟢|Deployment 🚀, Security 🔒, Frontend 🖥|Remove everything that can give attackers an attack surface.|
+|The app has an ability to quickly check and deploy hot-fixes to production|Should have 🟡|Deployment 🚀, CI/CD 🤖||
+|The error messages on client doesn’t include stack traces|Nice to have 🟢|Deployment 🚀, Security 🔒, Frontend 🖥|Remove everything that can give attackers an attack surface|
 |The app has versioning system enabled and has a change log|Nice to have 🟢|Deployment 🚀||
