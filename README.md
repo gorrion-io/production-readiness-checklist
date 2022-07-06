@@ -2,7 +2,7 @@
 
 |Name|Level|Scope|Comment
 |--|--|--|--|
-|The website is available via client’s domain address with SSL|Critical 🔴|Frontend 🖥, Security 🔒||
+|The website is available via client’s domain address with SSL and redirected from HTTP to HTTPS|Critical 🔴|Frontend 🖥, Security 🔒||
 |The domain is redirected to the www subdomain|Critical 🔴|Frontend 🖥||
 |The check on https://securityheaders.com/ gives at least a “B” grade|Critical 🔴|Frontend 🖥, Security 🔒||
 |The backend is accessible via the client’s domain with SSL|Critical 🔴|Backend ⚙️, Security 🔒||
@@ -14,7 +14,7 @@
 |The database is hosted on production-grade solution|Critical 🔴|Deployment 🚀, Security 🔒|Recommended: AWS RDS, Digital Ocean Databases, Supabase, PlanetScale or similar|
 |The database has backups enabled|Critical 🔴|Deployment 🚀, Security 🔒||
 |CRON jobs should only be handled via one source of truth|Critical 🔴|Backend ⚙️, Deployment 🚀||
-|All password related to the project should be shared via password manager with corresponding group|Critical 🔴|Security 🔒, Deployment 🚀|Do not share password, secrets etc. in messages nor host them on git|
+|All password related to the project should be shared via password manager only with corresponding group|Critical 🔴|Security 🔒, Deployment 🚀|Do not share password, secrets etc. in messages nor host them on git|
 |The app should have a risk management and disaster recovery plan written down and available at any point.|Critical 🔴|Monitoring 👀, Security 🔒, Deployment 🚀||
 |The app has an uptime-monitoring system configured|Should have 🟡|Monitoring 👀, Backend ⚙️, Frontend 🖥|Leverage health checks. Recommended: https://instatus.com/ or https://betteruptime.com/|
 |The app has a logging solution configured|Should have 🟡|Monitoring 👀, Backend ⚙️, Frontend 🖥|Recommended: AWS Cloudwatch or https://betterstack.com/logtail|
