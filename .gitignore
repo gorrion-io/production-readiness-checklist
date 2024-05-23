@@ -2,3 +2,6 @@
 .obsidian
 .DS_Store
 node_modules
+
+clickup-template.csv
+jira-template.csv
