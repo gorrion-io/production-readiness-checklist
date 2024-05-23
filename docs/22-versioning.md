@@ -1,3 +1,7 @@
+---
+title: The app has versioning system enabled and has a change log
+---
+
 # The app has versioning system enabled and has a change log
 
 ## Description

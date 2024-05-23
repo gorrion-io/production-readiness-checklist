@@ -1,3 +1,7 @@
+---
+title: The JWT secret is safe and configured only on the server side
+---
+
 # The JWT secret is safe and configured only on the server-side
 
 ## Description

@@ -1,3 +1,7 @@
+---
+title: The domain is redirected to the www subdomain
+---
+
 # The domain is redirected to the www subdomain
 
 ```Plain Text

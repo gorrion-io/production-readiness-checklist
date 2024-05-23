@@ -1,3 +1,7 @@
+---
+title: The website is available via client’s domain address with TLS and redirected from HTTP to HTTPS
+---
+
 # The website is available via client’s domain address with TLS and redirected from HTTP to HTTPS
 
 ## Description

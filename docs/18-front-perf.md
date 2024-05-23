@@ -1,3 +1,7 @@
+---
+title: The frontend should be checked periodically in terms of performance
+---
+
 # The frontend should be checked periodically in terms of performance
 
 ## Description

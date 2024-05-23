@@ -1,3 +1,7 @@
+---
+title: There is a way to quickly check and deploy hot fixes to production
+---
+
 # There is a way to quickly check and deploy hot fixes to production
 
 ## Description

@@ -1,3 +1,7 @@
+---
+title: The backend is accessible only from the client’s domains using CORS
+---
+
 # The backend is accessible only from the client’s domains using CORS
 
 ## Description

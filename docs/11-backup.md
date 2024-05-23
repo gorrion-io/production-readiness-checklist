@@ -1,3 +1,7 @@
+---
+title: The system has backups enabled
+---
+
 # The system has backups enabled
 
 ## The golden rule:

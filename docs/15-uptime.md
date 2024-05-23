@@ -1,3 +1,7 @@
+---
+title: The app has an uptime-monitoring system configured
+---
+
 # The app has an uptime-monitoring system configured
 
 ## Description

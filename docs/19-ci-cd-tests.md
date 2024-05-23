@@ -1,3 +1,7 @@
+---
+title: Tests and audits should run in CI/CD pipelines
+---
+
 # Tests and audits should run in CI/CD pipelines
 
 ## Description

@@ -1,3 +1,7 @@
+---
+title: The app has an error-monitoring system configured
+---
+
 # The app has an error-monitoring system configured
 
 ## Description

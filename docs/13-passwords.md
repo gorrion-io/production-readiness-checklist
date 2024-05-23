@@ -1,3 +1,7 @@
+---
+title: All password related to the project should be shared via password manager only with corresponding group
+---
+
 # All password related to the project should be shared via password manager only with corresponding group
 
 ## Description

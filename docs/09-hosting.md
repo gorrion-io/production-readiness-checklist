@@ -1,3 +1,7 @@
+---
+title: The app is hosted on a production-grade cloud solution
+---
+
 # The app is hosted on production-grade cloud solution
 
 ## Description

@@ -1,3 +1,7 @@
+---
+title: CRON jobs should only be handled via one source of truth
+---
+
 # CRON jobs should only be handled via one source of truth
 
 ## Description

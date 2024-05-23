@@ -1,3 +1,7 @@
+---
+title: The check on https://securityheaders.com/ gives at least a “B” grade
+---
+
 # The check on https://securityheaders.com/ gives at least a “B” grade
 
 ## Description

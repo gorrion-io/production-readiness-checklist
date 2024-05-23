@@ -1,3 +1,7 @@
+---
+title: The error messages on client don’t include stack traces
+---
+
 # The error messages on client don’t include stack traces
 
 ## Description

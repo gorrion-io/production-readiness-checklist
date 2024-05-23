@@ -1,3 +1,7 @@
+---
+title: The app has a logging solution configured
+---
+
 # The app has a logging solution configured
 
 ## Description
