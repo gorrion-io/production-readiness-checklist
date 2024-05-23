@@ -1,0 +1,17 @@
+{
+  "name": "production-readiness-checklist",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "changeset": "changeset",
+    "update:version": "changeset version"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@9.1.1",
+  "dependencies": {
+    "@changesets/cli": "^2.27.3"
+  }
+}
