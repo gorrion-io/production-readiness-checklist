@@ -1,5 +1,11 @@
 # production-readiness-checklist
 
+## 1.2.2
+
+### Patch Changes
+
+- 5c60dc9: fix release action
+
 ## 1.2.1
 
 ### Patch Changes
