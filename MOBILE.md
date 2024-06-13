@@ -18,4 +18,4 @@
 | [The app should work without any issues when font scaling in OS is enabled](./docs/mobile/font-scaling.md) | Should have 🟡  |
 | [The permission usage descriptions should be localised](./docs/mobile/permissions.md)                      | Should have 🟡  |
 | [The app using SSO always applies the recent rules](./docs/mobile/sso.md)                                  | Nice to have 🟢 |
-| The app has properly configured and validated deep linking                                                 | Nice to have 🟢 |
+| [The app has properly configured and validated deep linking](./docs/mobile/deeplinking.md)                 | Nice to have 🟢 |
