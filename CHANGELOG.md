@@ -1,5 +1,13 @@
 # production-readiness-checklist
 
+## 2.0.0
+
+### Major Changes
+
+- ef1dfab: Mobile version
+
+  Introducing the WIP mobile version of the checklist. This version is still in development and will be available soon.
+
 ## 1.2.2
 
 ### Patch Changes
