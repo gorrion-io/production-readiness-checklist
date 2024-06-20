@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "generate-template": "tsx ./scripts/generate-template.ts",
+    "generate-templates": "tsx ./scripts/generate-templates.ts",
     "changeset": "changeset",
     "update:version": "changeset version"
   },
@@ -19,6 +19,7 @@
     "remark-gfm": "^4.0.0"
   },
   "devDependencies": {
+    "@types/mdast": "^4.0.4",
     "@types/node": "^20.12.12",
     "tsx": "^4.11.0"
   }

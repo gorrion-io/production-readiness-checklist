@@ -44,7 +44,7 @@ jobs:
         run: pnpm install
 
       - name: Run generator
-        run: pnpm run generate-template
+        run: pnpm run generate-templates
 
       - uses: actions/upload-artifact@v4
         id: artifacts
@@ -52,8 +52,10 @@ jobs:
         with:
           name: templates
           path: |
-            ./clickup-template.csv
-            ./jira-template.csv
+            ./base-clickup-template.csv
+            ./base-jira-template.csv
+            ./mobile-clickup-template.csv
+            ./mobile-jira-template.csv
           if-no-files-found: ignore
 
       - name: Create Release Pull Request
