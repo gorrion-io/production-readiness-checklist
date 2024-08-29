@@ -14,3 +14,5 @@ We should distinct between consent to:
 3. Email marketing 
 4. Phone marketing
 5. Sharing data with 3rd party services
+
+This means that if the end-user agrees to any of the above, it should be a distinct agreement, i.e. in the form of a checkbox for each applicable consent.
