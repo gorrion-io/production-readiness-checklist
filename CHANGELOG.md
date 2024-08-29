@@ -1,5 +1,15 @@
 # production-readiness-checklist
 
+## 3.0.0
+
+### Major Changes
+
+- 9cdd2b3: GDPR checklist
+
+### Minor Changes
+
+- 9cdd2b3: GDPR checklist
+
 ## 2.1.0
 
 ### Minor Changes
