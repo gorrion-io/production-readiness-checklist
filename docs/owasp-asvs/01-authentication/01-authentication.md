@@ -8,6 +8,31 @@ title: Authentication requirements are implemented securely
 ℹ️ Proper authentication is the foundation of application security
 ```
 
+## TLDR (must-haves)
+
+- **Strong Password Requirements**
+
+  - Minimum 12 characters, allow up to 64-128 characters
+  - No mandatory character type rules (uppercase, numbers, etc.)
+  - Allow all printable Unicode characters, including spaces and emojis
+  - Check against breached password databases
+  - Provide a password strength meter
+
+- **Essential Security Controls**
+
+  - Implement rate limiting on critical endpoints
+  - Use secure, salted password hashing (node-rs/argon2)
+  - Send notifications for account changes (password, email, etc.). Sending notifications for unusual logins is a plus!
+  - Support MFA (TOTP, security keys, or push notifications)
+  - Implement secure account recovery (avoid security questions)
+
+- **User Experience**
+
+  - Allow paste functionality and password managers
+  - Option to view masked passwords temporarily
+  - Require current and new password during changes
+  - Use secure channels for OTP/reset codes with short expiration
+
 ## Description
 
 Authentication is the process of verifying that an individual, entity or website is who they claim to be. Implementing secure authentication is critical to protect user accounts and prevent unauthorized access.
@@ -60,4 +85,4 @@ Implement authentication using secure frameworks and libraries with proper passw
 
 ### Option 2: Identity as a Service
 
-Use established authentication services like Clerk, BetterAuth or AWS Cognito
+Use established authentication services like Clerk, BetterAuth or AWS Cognito that handle these features out of the box.
