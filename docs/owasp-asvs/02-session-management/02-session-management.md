@@ -4,6 +4,33 @@ title: Session management is implemented securely
 
 # Session management is implemented securely
 
+## TLDR (must-haves)
+
+- **Session Token Security**
+
+  - Never expose persistent session tokens in URLs
+  - Generate new tokens on authentication
+  - Store client tokens securely (cookies or HTML5 storage)
+
+- **Cookie Security**
+
+  - Set Secure, HttpOnly, and SameSite attributes
+  - Use \_\_Host- prefix when appropriate
+  - Configure precise path attributes for shared domains
+
+- **Session Lifecycle**
+
+  - Properly invalidate sessions on logout
+  - Implement timeouts (idle and absolute)
+  - Regenerate session tokens after user privilege changes
+  - Require re-authentication for sensitive operations
+
+- **Protection Mechanisms**
+
+  - Prevent session fixation attacks
+  - Implement periodic re-authentication (max 30 days)
+  - Provide clear logout functionality that proerly invalidates the session
+
 ## Description
 
 Secure session management is crucial for maintaining user authentication state across multiple requests while preventing session-based attacks. Proper implementation helps protect users from session hijacking, fixation, and other related vulnerabilities.
@@ -34,7 +61,7 @@ Secure session management is crucial for maintaining user authentication state a
 
 - **Session Management Best Practices**:
 
-  - Regenerate session IDs after authentication, privilege level changes, or other sensitive operations to prevent session fixation attacks.
+  - Regenerate session tokens after authentication, privilege level changes, or other sensitive operations to prevent session fixation attacks.
   - Provide a clear logout function that properly invalidates the session.
   - Implement both idle timeout and absolute timeout to limit exposure.
 
