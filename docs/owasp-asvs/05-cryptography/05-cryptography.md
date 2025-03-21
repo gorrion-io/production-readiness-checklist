@@ -8,6 +8,23 @@ title: Cryptography is implemented securely
 ℹ️ Never implement your own cryptographic algorithms - use well-vetted libraries instead
 ```
 
+## TLDR (must-haves)
+
+- **Fundamental Security Controls**
+
+  - Use well-established cryptographic libraries - never custom implementations
+  - Ensure all errors are handled securely without leaking sensitive information
+
+- **Key Management Essentials**
+
+  - Store cryptographic keys in secure vaults, not in application code or config
+  - Implement proper key rotation, access controls, and lifecycle management
+
+- **Implementation Best Practices**
+
+  - Use modern algorithms (Argon2, scrypt, bcrypt) for password hashing
+  - Implement TLS 1.2+ with strong cipher suites for all communications
+
 ## Description
 
 Proper cryptographic implementation is essential for protecting sensitive data at rest and in transit. Cryptography should be implemented using established libraries and following current best practices.
