@@ -4,6 +4,33 @@ title: Access control mechanisms are properly implemented
 
 # Access control mechanisms are properly implemented
 
+```
+ℹ️ Proper access control is essential for protecting application resources and data
+```
+
+## TLDR (must-haves)
+
+- **Core Access Control Principles**
+
+  - Implement deny-by-default approach
+  - Enforce access controls on server-side, not just client-side
+  - Apply principle of least privilege for all user roles
+  - Ensure access controls fail securely (deny access when errors occur)
+
+- **Protection Against Common Attacks**
+
+  - Implement IDOR (Insecure Direct Object Reference) protections
+  - Use strong anti-CSRF mechanisms for authenticated functions
+  - Apply rate limiting and anti-automation for sensitive operations
+  - Prevent path traversal and unauthorized directory access
+
+- **Implementation Best Practices**
+
+  - Use multi-factor authentication for administrative interfaces
+  - Log all access control failures for monitoring and auditing
+  - Implement consistent access checks across the application
+  - Never expose features in UI that users lack permission to access
+
 ## Description
 
 Access control ensures that users can only access resources and perform actions they are authorized for. Proper implementation prevents unauthorized access to sensitive functionality and data.
