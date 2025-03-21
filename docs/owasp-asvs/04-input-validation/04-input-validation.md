@@ -8,6 +8,23 @@ title: All input is validated, sanitized, and properly encoded
 ℹ️ Never trust user input - validate everything server-side
 ```
 
+## TLDR (must-haves)
+
+- **Input Validation Essentials**
+
+  - Implement server-side validation for ALL input regardless of client-side validation
+  - Verify all structured data (JSON, XML) against defined schemas
+  - Implement protections against parameter pollution and mass assignment attacks
+
+- **Sanitization Requirements**
+
+  - Sanitize unstructured data with appropriate character and length restrictions
+  - Apply special sanitization for email, template engines, file upload and SVG content
+
+- **Output Encoding Best Practices**
+
+  - Apply framework-provided context-aware auto-escaping when available
+
 ## Description
 
 Proper data validation, sanitization, and encoding are critical defenses against injection attacks, cross-site scripting (XSS), and other vulnerabilities that exploit untrusted data. This includes both validating input when it enters the application and properly encoding output when it leaves.
