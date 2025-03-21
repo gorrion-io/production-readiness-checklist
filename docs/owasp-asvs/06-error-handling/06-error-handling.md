@@ -4,6 +4,29 @@ title: Error handling and logging are implemented securely
 
 # Error handling and logging are implemented securely
 
+```
+ℹ️ Properly handle errors and logs to maintain security while providing useful information
+```
+
+## TLDR (must-haves)
+
+- **Secure Error Handling**
+
+  - Show generic error messages to users, never expose stack traces or system details. Log errors internally for debugging.
+
+- **Privacy-Compliant Logging**
+
+  - Never log sensitive data (passwords, tokens, payment details, PII)
+  - Comply with relevant privacy laws (GDPR) in log content
+  - Implement appropriate log retention and deletion policies
+  - Apply proper access controls to log storage and management
+
+- **Logging Best Practices**
+
+  - Include context (user ID, request ID, timestamp) but not sensitive data
+  - Log security-relevant events like authentication attempts and permission changes
+  - Implement monitoring and alerting for critical errors and suspicious patterns
+
 ## Description
 
 Proper error handling and logging are essential for application security, helping to identify issues without revealing sensitive information to potential attackers.
