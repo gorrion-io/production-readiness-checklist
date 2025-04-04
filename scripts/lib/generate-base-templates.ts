@@ -40,7 +40,7 @@ function getLink(cell?: TableCell | undefined) {
   }
   return `https://github.com/gorrion-io/production-readiness-checklist/blob/main${link.url.replace(
     ".",
-    ""
+    "",
   )}`;
 }
 
@@ -121,7 +121,7 @@ function getClickupPriority(level: string) {
 
 async function createJiraTemplate(results: string[][]) {
   const jiraTemplateFile = "./base-jira-template.csv";
-  let jiraTemplate = `Summary;Issue Type;Status;Project url; Priority;Labels;Labels;Labels;Description;Epic Summary
+  let jiraTemplate = `Summary;Issue Type;Priority;Labels;Labels;Labels;Description
 `;
   await writeFile(jiraTemplateFile, jiraTemplate, { encoding: "utf-8" });
 
@@ -130,11 +130,19 @@ async function createJiraTemplate(results: string[][]) {
       return;
     }
     const [name, level, scope, _comment, link] = row;
-    const jiraRow = `${name};Story;To Do;;${getJiraPriority(level ?? "")};${
-      scope?.split(",")?.[0]?.trim() ?? ""
-    };${scope?.split(",")?.[1]?.trim() ?? ""};${
-      scope?.split(",")?.[2]?.trim() ?? ""
-    };${link};PRC\n`;
+
+    const labels = Array.from({
+      length: 3,
+    })
+      .map((_, i) => {
+        const label = scope?.split(",")[i];
+        return label ?? "";
+      })
+      .join(";");
+
+    const jiraRow = `${name};Story;${getJiraPriority(
+      level ?? "",
+    )};${labels};${link}\n`;
     await appendFile(jiraTemplateFile, jiraRow, {
       encoding: "utf-8",
       flag: "a",
@@ -154,7 +162,7 @@ async function createClickupTemplate(results: string[][]) {
     }
     const [name, level, scope, _comment, link] = row;
     const clickupRow = `${name};To Do;${getClickupPriority(
-      level ?? ""
+      level ?? "",
     )};${link};${scope}\n`;
     await appendFile(clickupTemplateFile, clickupRow, {
       encoding: "utf-8",
