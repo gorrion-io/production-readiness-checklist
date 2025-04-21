@@ -29,7 +29,7 @@ title: Session management is implemented securely
 
   - Prevent session fixation attacks
   - Implement periodic re-authentication (max 30 days)
-  - Provide clear logout functionality that proerly invalidates the session
+  - Provide clear logout functionality that properly invalidates the session
 
 ## Description
 

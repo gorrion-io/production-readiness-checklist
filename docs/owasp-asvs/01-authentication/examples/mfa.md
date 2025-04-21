@@ -69,7 +69,7 @@ const generateMFASecret = (): string => {
  * Other implementation could generate a QR code here, so it is easier for the user to set it up.
  */
 export const enableMFAForUser = async (
-  userId: string,
+  userId: string
 ): Promise<string | null> => {
   try {
     const user = users.find((u) => u.id === userId);
@@ -229,7 +229,7 @@ export const authOptions: NextAuthOptions = {
       return url.startsWith(baseUrl) ? url : baseUrl;
     },
   },
-  secret: "your-nextauth-secret",
+  secret: process.env.NEXT_AUTH_SECRET,
   session: {
     strategy: "jwt",
     maxAge: 24 * 60 * 60, // 24 hours

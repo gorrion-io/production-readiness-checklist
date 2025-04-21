@@ -36,7 +36,7 @@ Proper error handling and logging are essential for application security, helpin
   - Ensure logs do not contain sensitive data and comply with privacy laws.
   - Don't collect sensitive information in logs unless specifically required.
   - Handle all logged information securely with appropriate protections.
-  - Implement appropriate log retention policies rather than indefinite storage.
+  - Implement appropriate log retention policies rather than indefinite storage. These policies might differ based on legal, regulatory, or contractual requirements. For example, HIPAA requires a 6-year retention period for audit logs.
   - Design errors to avoid disclosing unnecessary information.
 
 - **Log Content**:

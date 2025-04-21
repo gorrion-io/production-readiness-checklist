@@ -40,7 +40,7 @@ Authentication is the process of verifying that an individual, entity or website
 - **Password Security**:
 
   - Implement password requirements with minimum length of at least 12 characters.
-  - Verify that passwords of at least 64 characters are permitted, but deny passwords over 128 characters.
+  - Maximum password length should be at least 64 characters, and no more than 128 characters.
   - Do not perform password truncation.
   - Permit any printable Unicode character in passwords, including spaces and emojis.
   - Do not enforce composition rules limiting character types (no requirements for upper/lowercase, numbers, or special characters).

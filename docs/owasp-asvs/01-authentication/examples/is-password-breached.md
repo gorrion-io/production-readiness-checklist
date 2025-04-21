@@ -2,9 +2,12 @@ Example function that checks if password is on a breached list using HaveIBeenPw
 
 ```ts
 import { crypto } from "node:crypto";
+import commonPasswords from "./common-passwords.json" assert { type: "json" };
+
+const commonPasswordsSet = new Set(commonPasswords);
 
 export const isPasswordBreached = async (
-  password: string,
+  password: string
 ): Promise<boolean> => {
   try {
     const sha1Hash = crypto
@@ -17,7 +20,7 @@ export const isPasswordBreached = async (
     const suffix = sha1Hash.substring(5);
 
     const response = await fetch(
-      `https://api.pwnedpasswords.com/range/${prefix}`,
+      `https://api.pwnedpasswords.com/range/${prefix}`
     );
 
     const text = await response.text();
@@ -33,7 +36,11 @@ export const isPasswordBreached = async (
 
     return false;
   } catch {
-    // If some error occurs, return false, not to block the application
+    // If external API is down, validate against common passwords
+    if (commonPasswordsSet.has(password)) {
+      return true;
+    }
+
     return false;
   }
 };

@@ -64,4 +64,19 @@ const handler = (req: NextApiRequest, res: NextApiResponse) => {
 };
 
 export default loginRateLimit(handler);
+
+// example script to test rate limiting
+import http from "k6/http";
+
+export const options = {
+  // configuration for spike test
+  stages: [
+    { duration: "10s", target: 10 }, // traffic to 50 requests per second
+    { duration: "1s", target: 0 }, // no traffic
+  ],
+};
+
+export default () => {
+  const urlRes = http.get(process.env.NEXT_PUBLIC_API_URL + "/api/login");
+};
 ```

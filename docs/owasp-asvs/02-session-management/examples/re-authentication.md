@@ -52,7 +52,7 @@ export const authOptions: NextAuthOptions = {
 
         const isValidPassword = await verify(
           user.password,
-          credentials.password,
+          credentials.password
         );
         if (!isValidPassword) {
           return null;
@@ -103,7 +103,7 @@ const prisma = new PrismaClient();
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse,
+  res: NextApiResponse
 ) {
   const session = await getServerSession(req, res, authOptions);
 
@@ -140,13 +140,13 @@ export default async function handler(
     process.env.REAUTH_SECRET,
     {
       expiresIn: "5m",
-    },
+    }
   );
 
-  // Set cookie to be sent only to domains unser /api/sensitive
+  // Set cookie to be sent only to domains user /api/sensitive
   res.setHeader(
     "Set-Cookie",
-    `reauthToken=${reauthToken}; HttpOnly; Secure; SameSite=Strict; Path=/api/sensitive; Max-Age=300`,
+    `reauthToken=${reauthToken}; HttpOnly; Secure; SameSite=Strict; Path=/api/sensitive; Max-Age=300`
   );
   return res.status(200).json({
     success: true,
@@ -164,7 +164,7 @@ const prisma = new PrismaClient();
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse,
+  res: NextApiResponse
 ) {
   const session = await getServerSession(req, res, authOptions);
 
@@ -193,7 +193,7 @@ export default async function handler(
 
   res.setHeader(
     "Set-Cookie",
-    "reauthToken=; HttpOnly; Secure; SameSite=Strict; Path=/api/sensitive; Max-Age=0",
+    "reauthToken=; HttpOnly; Secure; SameSite=Strict; Path=/api/sensitive; Max-Age=0"
   );
 
   return res.status(200).json({ success: true });
