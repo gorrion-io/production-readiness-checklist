@@ -9,7 +9,7 @@ const prisma = new PrismaClient();
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse,
+  res: NextApiResponse
 ) {
   try {
     const { email, password } = req.body;
@@ -23,7 +23,7 @@ export default async function handler(
       // Dummy hash verification to prevent timing attacks
       await verify(
         "$argon2id$v=19$m=19456,t=2,p=1$c4QWIB+y15ITLaYZnNVGdg$PKEN7S05d+GE7n0hONL+oFOeUfOzo5WAn0by6//RDlk",
-        "dummy",
+        "dummy"
       );
       return res.status(401).json({ error: "Invalid credentials" });
     }
@@ -40,6 +40,12 @@ export default async function handler(
       userId: user.id,
     });
   } catch (error) {
+    // In case of known error, return specific error message
+    if (error instanceof Prisma.PrismaClientKnownRequestError) {
+      console.error("Database error:", error);
+      return res.status(500).json({ error: "Database error" });
+    }
+
     console.error("Authentication error:", error);
 
     // Return generic error regardless of what went wrong
