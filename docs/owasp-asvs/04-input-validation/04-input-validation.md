@@ -47,6 +47,26 @@ Proper data validation, sanitization, and encoding are critical defenses against
   - Sanitize or disable user-supplied SVG scriptable content to prevent XSS.
   - Sanitize or disable sandbox user-supplied scriptable or expression template language content (Markdown, CSS, XSL, BBCode, etc.).
 
+- **Output Encoding and Injection Prevention**:
+
+  - Use the appropriate encoder for each context (HTML, JavaScript, URLs, etc.) to safely handle untrusted inputs containing special characters, Unicode, or apostrophes like 'ねこ' or 'O'Hara'.
+  - Ensure output encoding preserves all Unicode character points from the user's chosen character set and locale, safely handling and validating them properly.
+  - Implement context-aware output escaping (preferably automated) to protect against reflected, stored, and DOM-based XSS attacks.
+  - Use parameterized queries, ORMs, entity frameworks, or equivalent protective measures for all database interactions to prevent injection attacks across SQL, HQL, NoSQL, and other database technologies.
+  - When parameterized or safer mechanisms aren't available, implement context-specific output encoding (such as SQL escaping for SQL queries) to protect against injection attacks.
+  - Implement safeguards against JSON injection attacks, JSON eval attacks, and unsafe JavaScript expression evaluation.
+  - Apply specific security controls to prevent LDAP injection vulnerabilities in all directory interactions.
+  - Protect against OS command injection by using parameterized OS queries or contextual command line output encoding for all system calls.
+  - Implement security controls to prevent Local File Inclusion (LFI) and Remote File Inclusion (RFI) attacks.
+  - Apply proper input validation and output encoding to prevent XPath injection and XML injection attacks.
+
+- **Deserialization Prevention**:
+
+  - Implement integrity checks or encryption for serialized objects to prevent hostile object creation or data tampering.
+  - Configure XML parsers with the most restrictive settings possible and disable unsafe features like external entity resolution to prevent XXE attacks.
+  - Avoid deserializing untrusted data or implement protective controls in both custom code and third-party libraries (JSON, XML, YAML parsers, etc.).
+  - Use JSON.parse() instead of eval() when parsing JSON in browsers or JavaScript-based backends.
+
 - **Server-side Validation Best Practices**:
 
   - Implement strong server-side validation regardless of client-side validation.

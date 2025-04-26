@@ -76,6 +76,7 @@ Authentication is the process of verifying that an individual, entity or website
   - Ensure that out of band authentication requests, codes, or tokens expire after a short period (about 10 minutes).
   - Ensure time-based OTPs have a defined lifetime before expiring.
   - Ensure codes are only usable once and only for the original request.
+  - Use weak authenticators (such as SMS and email) only for secondary verification and transaction approval and not as a replacement for more secure authentication methods.
 
 ## Proposed options
 
