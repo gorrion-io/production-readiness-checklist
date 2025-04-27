@@ -9,14 +9,14 @@ title: Ensure that all client connections use TLS
 ```
 
 ## TLDR (must-haves)
-  - Use TLS 1.2 or TLS 1.3
+
+- Use TLS 1.2 or TLS 1.3
 
 ### Secure Client Communication
 
 - Ensure that all connections use TLS.
-- Use the latest TLS testing tools to confirm that only strong cipher suites are enabled.
-- Make sure that only the latest recommended TLS versions, such as TLS 1.2 and TLS 1.3, are enabled—always prioritizing the newest version for optimal security.
-
+- Use the latest TLS testing tools to confirm that only strong cipher suites are enabled, with the strongest cipher suites set as preferred.
+- Configure the system to use only the latest recommended versions of the TLS protocol (such as TLS 1.2 and TLS 1.3), with the newest version set as the preferred option.
 
 ## Proposed solution
 

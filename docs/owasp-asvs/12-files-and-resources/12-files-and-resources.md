@@ -31,11 +31,12 @@ Don't accept excessively large files.
 - Scan uploaded files using antivirus software to detect and block known malicious content.
 
 ### Secure File Download
-- Configure the web server to only allow specific file extensions, preventing accidental exposure of sensitive files like:
+-  backups (.bak), temporary files (.swp), compressed archives (.zip, .tar.gz), and editor-specific files to prevent information and source code leakage.
+- Configure the web tier (web server, load balancer, CDN) to serve only files with explicitly allowed extensions, blocking potentially sensitive files like:
     - Backup files (e.g., .bak)
     - Temporary files (e.g., .swp)
     - Compressed archives (e.g., .zip, .tar.gz)
-Unless explicitly required, these files should be blocked.
+    - Editor-specific files (e.g., .idea, .vscode)
 - Ensure that uploaded files are never executed as HTML or JS to prevent cross-site scripting (XSS) risks.
 
 ### SSRF Protection
