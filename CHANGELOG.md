@@ -1,5 +1,11 @@
 # production-readiness-checklist
 
+## 4.0.0
+
+### Major Changes
+
+- 71cd8fc: ASVS level 1 as part of PRC
+
 ## 3.0.0
 
 ### Major Changes
