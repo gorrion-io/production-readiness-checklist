@@ -1,5 +1,11 @@
 # production-readiness-checklist
 
+## 4.0.1
+
+### Patch Changes
+
+- 566189d: Fix readme in ASVS
+
 ## 4.0.0
 
 ### Major Changes
