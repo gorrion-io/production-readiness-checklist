@@ -52,11 +52,9 @@ jobs:
         with:
           name: templates
           path: |
-            ./base-clickup-template.csv
+            ./asvs-jira-template.csv
             ./base-jira-template.csv
-            ./mobile-clickup-template.csv
             ./mobile-jira-template.csv
-            ./gdpr-clickup-template.csv
             ./gdpr-jira-template.csv
           if-no-files-found: ignore
 
@@ -65,7 +63,7 @@ jobs:
         uses: changesets/action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      
+
   publish:
     needs: [setup]
     runs-on: ubuntu-latest
@@ -82,24 +80,24 @@ jobs:
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
-  
+
       - name: Get version from package.json
         id: get_version
         run: echo "::set-output name=version::$(node -p "require('./package.json').version")"
-  
+
       - name: Check if tag exists
         run: |
           if git rev-parse v${{ steps.get_version.outputs.version }} >/dev/null 2>&1; then
             echo "Tag v${{ steps.get_version.outputs.version }} already exists"
           fi
-  
+
       - name: Remove existing tag if exists
         run: |
           if git rev-parse v${{ steps.get_version.outputs.version }} >/dev/null 2>&1; then
             git push --delete origin v${{ steps.get_version.outputs.version }}
             git tag -d v${{ steps.get_version.outputs.version }}
           fi
-  
+
       - name: Create tag
         run: |
           git tag -a v${{ steps.get_version.outputs.version }} -m "Version ${{ steps.get_version.outputs.version }}"
@@ -108,7 +106,7 @@ jobs:
       - name: Create a Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: ./templates/* 
+          artifacts: ./templates/*
           token: ${{ secrets.GH_TOKEN }}
           name: Release v${{ steps.get_version.outputs.version }}
           tag: v${{ steps.get_version.outputs.version }}
