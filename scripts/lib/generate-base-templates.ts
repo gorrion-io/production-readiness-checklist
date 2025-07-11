@@ -40,7 +40,7 @@ function getLink(cell?: TableCell | undefined) {
   }
   return `https://github.com/gorrion-io/production-readiness-checklist/blob/main${link.url.replace(
     ".",
-    "",
+    ""
   )}`;
 }
 
@@ -106,19 +106,6 @@ function getJiraPriority(level: string) {
   }
 }
 
-function getClickupPriority(level: string) {
-  switch (level) {
-    case "Critical 🔴":
-      return "Urgent";
-    case "Should have 🟡":
-      return "Normal";
-    case "Nice to have 🟢":
-      return "Low";
-    default:
-      return "Unknown";
-  }
-}
-
 async function createJiraTemplate(results: string[][]) {
   const jiraTemplateFile = "./base-jira-template.csv";
   let jiraTemplate = `Summary;Issue Type;Priority;Labels;Labels;Labels;Description
@@ -141,30 +128,9 @@ async function createJiraTemplate(results: string[][]) {
       .join(";");
 
     const jiraRow = `${name};Story;${getJiraPriority(
-      level ?? "",
+      level ?? ""
     )};${labels};${link}\n`;
     await appendFile(jiraTemplateFile, jiraRow, {
-      encoding: "utf-8",
-      flag: "a",
-    });
-  });
-}
-
-async function createClickupTemplate(results: string[][]) {
-  const clickupTemplateFile = "./base-clickup-template.csv";
-  let clickupTemplate = `Task name;Status;Priority;Description;Tags
-`;
-  await writeFile(clickupTemplateFile, clickupTemplate, { encoding: "utf-8" });
-
-  results.forEach(async (row, index) => {
-    if (index === 0) {
-      return;
-    }
-    const [name, level, scope, _comment, link] = row;
-    const clickupRow = `${name};To Do;${getClickupPriority(
-      level ?? "",
-    )};${link};${scope}\n`;
-    await appendFile(clickupTemplateFile, clickupRow, {
       encoding: "utf-8",
       flag: "a",
     });
@@ -191,7 +157,5 @@ export async function getBaseTemplates() {
   }
 
   await createJiraTemplate(result);
-  await createClickupTemplate(result);
-
   console.log("Done!");
 }
