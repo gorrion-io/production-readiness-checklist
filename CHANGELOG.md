@@ -1,5 +1,11 @@
 # production-readiness-checklist
 
+## 4.1.0
+
+### Minor Changes
+
+- 92bfb23: ASVS Jira import template
+
 ## 4.0.1
 
 ### Patch Changes
