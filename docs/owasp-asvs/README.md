@@ -46,13 +46,10 @@
 
 ## Cryptography
 
-| Name                                                                         | Level       | Scope                   | Comment                                                 |
-| ---------------------------------------------------------------------------- | ----------- | ----------------------- | ------------------------------------------------------- |
-| [Fundamental Security Controls](./05-cryptography/05-cryptography.md)        | Critical 🔴 | Security 🔒, Backend ⚙️ | Use established libraries, never custom implementations |
-| [Key Management Essentials](./05-cryptography/05-cryptography.md)            | Critical 🔴 | Security 🔒, Backend ⚙️ | Secure key storage, rotation, and access controls       |
-| [Implementation Best Practices](./05-cryptography/05-cryptography.md)        | Critical 🔴 | Security 🔒, Backend ⚙️ | Modern algorithms, strong TLS configuration             |
-| [Password Hashing](./05-cryptography/examples/password-hashing.md)           | Critical 🔴 | Security 🔒, Backend ⚙️ | Proper password hashing with modern algorithms          |
-| [Secure Error Handling](./05-cryptography/examples/secure-error-handling.md) | Critical 🔴 | Security 🔒, Backend ⚙️ | Error handling without information leakage              |
+| Name                                                                        | Level       | Scope                   | Comment                                                 |
+| --------------------------------------------------------------------------- | ----------- | ----------------------- | ------------------------------------------------------- |
+| [Fundamental Security Controls](./05-cryptography/05-cryptography.md)       | Critical 🔴 | Security 🔒, Backend ⚙️ | Use established libraries, never custom implementations |
+| [Secure Cryptographic Implementation](./05-cryptography/05-cryptography.md) | Critical 🔴 | Security 🔒, Backend ⚙️ | Ensure cryptographic modules fail securely              |
 
 ## Error Handling & Logging
 
